@@ -88,7 +88,7 @@ function countUp(ele) {
         clearInterval(count);
         started = true;
       }
-    }, 20 / ele.dataset.progress);
+    }, 1000 / ele.dataset.progress);
   }
 }
 
