@@ -1,7 +1,7 @@
+// Navbar Variables & Functions =>
 const other = document.querySelector(".other");
 const extraNavbar = document.querySelector(".extra-navbar");
 const links = document.querySelectorAll(".clicked");
-
 other.addEventListener("click", () => {
   other.classList.toggle("active");
   if (other.classList.contains("active")) {
@@ -27,7 +27,6 @@ function hide() {
   other.classList.remove("active");
   extraNavbar.style.cssText = "height: 0; padding: 0px 12px";
 }
-
 // #############################################
 const readButton = document.querySelectorAll(".more button");
 const buttonArrow = document.querySelectorAll(".more a i");
@@ -39,8 +38,8 @@ readButton.forEach((ele) => {
     ele.parentElement.children[1].children[0].style.right = "100%";
   });
 });
-
 // #############################################
+// Skills Variables & Functions =>
 const MySkillsSection = document.querySelector("#my-skills");
 const skillsNumber = document.querySelectorAll(
   ".my-skills .container .skills-progress .progress-parent p"
@@ -48,15 +47,13 @@ const skillsNumber = document.querySelectorAll(
 const progress = document.querySelectorAll(".progress-line");
 console.log(progress);
 let started = false;
-
-// #############################################
+// Stats Variables & Functions =>
 const myStatsSection = document.querySelector("#my-stats");
 const statsNumber = document.querySelectorAll(
   ".my-stats .container .card span"
 );
 let statStarted = false;
 let statDownStarted = false;
-
 window.addEventListener("scroll", () => {
   skillsDynamic(MySkillsSection);
   statsDynamic(myStatsSection);
@@ -88,12 +85,11 @@ function countUp(ele) {
         clearInterval(count);
         started = true;
       }
-    }, 1000 / ele.dataset.progress);
+    }, 1500 / ele.dataset.progress);
   }
 }
-
 function statsDynamic(section) {
-  if (window.scrollY >= section.offsetTop - 400) {
+  if (window.scrollY >= section.offsetTop - 500) {
     if (!statStarted) {
       statsNumber.forEach((ele) => {
         let i = 0;
@@ -102,9 +98,25 @@ function statsDynamic(section) {
           if (ele.textContent == ele.dataset.progress) {
             clearInterval(statCount);
           }
-        }, 1850 / ele.dataset.progress);
+        }, 2000 / ele.dataset.progress);
       });
       statStarted = true;
     }
+  } else if (window.scrollY <= section.offsetTop - 2000) {
+    statsNumber.forEach((ele) => {
+      ele.textContent = 0;
+      statStarted = false
+    });
   }
 }
+// #############################################
+const seconds = document.querySelector(".latest-events .seconds");
+const minutes = document.querySelector(".latest-events .minutes");
+const hours = document.querySelector(".latest-events .hours");
+const days = document.querySelector(".latest-events .days");
+setInterval(() => {
+  seconds.children[0].textContent = new Date().getSeconds();
+  minutes.children[0].textContent = new Date().getMinutes();
+  hours.children[0].textContent = new Date().getHours();
+  days.children[0].textContent = new Date().getDate();
+}, 1000);
