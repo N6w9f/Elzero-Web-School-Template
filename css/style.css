@@ -126,7 +126,6 @@ footer {
   position: relative;
   z-index: 0;
 }
-
 .effect {
   position: relative;
 }
@@ -148,7 +147,6 @@ footer {
   top: 80px;
   right: 0;
 }
-
 /* === Hover Event === */
 .head-title h1:hover {
   color: var(--white-color);
@@ -176,7 +174,6 @@ footer {
   border-color: var(--secondary-color);
   color: var(--secondary-color);
 }
-
 /* ===== Header ======*/
 header {
   background-color: var(--white-color);
@@ -230,7 +227,6 @@ header .container .navbar li button {
   font-size: 32px;
   padding-right: 0;
 }
-
 header .container .extra-navbar {
   width: 100%;
   background-color: var(--white-color);
@@ -308,7 +304,6 @@ header .container .navbar .active button {
 header .container .extra-navbar ul li:hover::before {
   left: 0;
 }
-
 /* ===== Main[--- Landing ---] ===== */
 .landing {
   height: calc(100dvh - 70px);
@@ -359,7 +354,6 @@ header .container .extra-navbar ul li:hover::before {
   translate: -50% -15px;
   animation: up-and-down-arrow 1.5s ease infinite alternate;
 }
-
 /* ===== Articles ===== */
 .articles .container {
   display: grid;
@@ -373,7 +367,7 @@ header .container .extra-navbar ul li:hover::before {
   gap: 12px;
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
   transition: var(--transition-3);
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
 }
 .articles .container .card img {
   width: 100%;
@@ -389,7 +383,7 @@ header .container .extra-navbar ul li:hover::before {
   line-height: 1.3;
 }
 .articles .container .card .more {
-  padding: 8px 12px;
+  padding: 12px;
   border-top: 1px solid var(--light-gray-color);
   display: flex;
   align-items: center;
@@ -426,7 +420,6 @@ header .container .extra-navbar ul li:hover::before {
 .articles .container .card .more button:hover {
   scale: 0.97;
 }
-
 /* ===== Gallery ===== */
 /* === Gallery Content === */
 .gallery .container .box {
@@ -541,7 +534,6 @@ header .container .extra-navbar ul li:hover::before {
   left: -100%;
   transition: var(--transition-3);
 }
-
 /* === Hover Event === */
 .features .container .card:hover .img::after {
   clip-path: polygon(-5% 60%, 150% 100%, 0 100%);
@@ -580,7 +572,6 @@ header .container .extra-navbar ul li:hover::before {
 .features .container .passion .text button::before {
   background-color: var(--info-color);
 }
-
 /* ===== Testimonials ===== */
 .testimonials .grid-3 {
   gap: 51px 40px;
@@ -611,7 +602,6 @@ header .container .extra-navbar ul li:hover::before {
 .testimonials .container .card .info .full-star {
   color: var(--warning-color);
 }
-
 /* ===== Team Members ===== */
 /* === Team Members Content === */
 .team-members .container .card {
@@ -685,7 +675,6 @@ header .container .extra-navbar ul li:hover::before {
 .team-members .container .card:hover div h3 {
   color: var(--gray-color);
 }
-
 /* ===== Services ===== */
 /* === Services Content === */
 .services .container .card {
@@ -766,7 +755,6 @@ header .container .extra-navbar ul li:hover::before {
 .services .container .card:hover::before {
   width: 100%;
 }
-
 /* ===== My Skills ===== */
 .my-skills .container {
   display: flex;
@@ -807,8 +795,8 @@ header .container .extra-navbar ul li:hover::before {
   position: absolute;
   top: 0;
   left: 0;
+  transition: 2s;
 }
-
 /* ===== How It Works ===== */
 .how-it-works .container {
   display: flex;
@@ -865,7 +853,6 @@ header .container .extra-navbar ul li:hover::before {
   width: 100%;
   height: 100%;
 }
-
 /* ===== Latest Events ===== */
 .latest-events .container {
   text-align: center;
@@ -926,7 +913,6 @@ header .container .extra-navbar ul li:hover::before {
   line-height: 1.4;
   color: var(--gray-color);
 }
-
 .latest-events .container form {
   width: 100%;
   max-width: 650px;
@@ -967,7 +953,6 @@ header .container .extra-navbar ul li:hover::before {
 .latest-events .container form input[type="submit"]:hover {
   scale: 0.97;
 }
-
 /* ===== Pricing Plans ===== */
 /* === Pricing Plans Content ===== */
 .pricing-plans .container .card {
@@ -1045,7 +1030,6 @@ header .container .extra-navbar ul li:hover::before {
   font-weight: 500;
   transition: var(--transition-3);
 }
-
 .pricing-plans .container .card label {
   color: var(--white-color);
   background-color: var(--info-color);
@@ -1080,7 +1064,6 @@ header .container .extra-navbar ul li:hover::before {
   background-color: var(--info-color);
   color: var(--white-color);
 }
-
 /* ===== Top Videos ===== */
 .top-videos .container {
   display: grid;
@@ -1144,7 +1127,6 @@ header .container .extra-navbar ul li:hover::before {
   background-color: #fafafa;
   color: var(--info-color);
 }
-
 /* ===== My Stats ===== */
 .my-stats {
   background-image: url(../images/stats.jpg);
@@ -1214,7 +1196,6 @@ header .container .extra-navbar ul li:hover::before {
 .my-stats .container .card:hover::after {
   height: 100%;
 }
-
 /* ===== Discount ===== */
 .discount {
   display: grid;
@@ -1301,7 +1282,6 @@ header .container .extra-navbar ul li:hover::before {
   scale: 0.97;
 }
 /* === Hover Event === */
-
 /* ===== Footer ===== */
 footer {
   background-color: #191919;
@@ -1311,7 +1291,6 @@ footer .container {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 22px;
 }
-
 footer .container .line:first-child {
   display: flex;
   flex-direction: column;
@@ -1337,7 +1316,6 @@ footer .container .line:first-child p {
   color: #b9b9b9;
   line-height: 2;
 }
-
 footer .container .line:nth-child(2) ul li {
   padding: 15px 0;
   user-select: none;
@@ -1357,7 +1335,6 @@ footer .container .line:nth-child(2) ul li a i {
   color: var(--info-color);
   font-size: 22px;
 }
-
 footer .container .line:nth-child(3) {
   display: flex;
   align-items: center;
@@ -1381,7 +1358,6 @@ footer .container .line:nth-child(3) ul li .text {
   line-height: 1.8;
   font-size: 16px;
 }
-
 footer .container .line:last-child {
   height: fit-content;
   display: grid;
@@ -1406,7 +1382,6 @@ footer .container .line:first-child ul li .yout:hover {
 footer .container .line:nth-child(2) ul li:hover a {
   translate: 6px;
 }
-
 /* Media */
 /* ====== Media-min ====== */
 @media (min-width: 475px) {
@@ -1435,7 +1410,6 @@ footer .container .line:nth-child(2) ul li:hover a {
     width: 1170px;
   }
 }
-
 /* ====== Media-max ====== */
 @media (max-width: 1279px) {
   .landing .container img {
@@ -1534,7 +1508,6 @@ footer .container .line:nth-child(2) ul li:hover a {
     gap: 4px;
   }
 }
-
 /* ====== Animation ===== */
 @keyframes up-and-down {
   to {
